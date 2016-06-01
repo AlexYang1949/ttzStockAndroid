@@ -15,16 +15,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <receiver android:name=".PushReciver">
+            <intent-filter>
+                <action android:name="com.ttz.ttzandroid.PushReciver" />
+                <action android:exported="false" />
+            </intent-filter>
+        </receiver>
 
-        <receiver
-        <!-- 此处com.getui.demo.PushDemoReceiver，需要替换成开发者自己的BroadcastReceiver文件全名-->
-        android:name="com.getui.demo.PushDemoReceiver"
-        android:exported="false">
-        <intent-filter>
-            <action android:name="com.igexin.sdk.action.${GETUI_APP_ID}" />
-        </intent-filter>
-    </receiver>
-
-    </application>
-
-</manifest>
+</application></manifest>
