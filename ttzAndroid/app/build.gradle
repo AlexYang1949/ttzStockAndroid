@@ -1,0 +1,36 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "23.0.3"
+
+    defaultConfig {
+        applicationId "com.ttz.ttzandroid"
+        minSdkVersion 15
+        targetSdkVersion 23
+        versionCode 1
+        versionName "1.0"
+
+        manifestPlaceholders = [
+                GETUI_APP_ID : "VRvcZ24c4nAZ7PQH5dPRD",
+                GETUI_APP_KEY : "IO8acp6zV18s4xbzEB63K8",
+                GETUI_APP_SECRET : "ulTA2ti1TR9XdE7HnAh7e2",
+                PACKAGE_NAME : applicationId
+        ]
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+    compile 'com.android.support:appcompat-v7:23.4.0'
+    compile 'com.getui:sdk:+'
+    compile 'com.getui:ext:2.0.3'
+    compile 'com.android.support:support-v4:+'
+}
